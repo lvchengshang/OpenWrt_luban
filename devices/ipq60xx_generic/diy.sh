@@ -7,7 +7,7 @@ SHELL_FOLDER=$(dirname $(readlink -f "$0"))
 
 sed -i "/CONFIG_KERNEL_/d" .config
 
-rm -rf devices/common/patches/{fix.patch,targets.patch,kernel-defaults.patch} target/imagebuilder package/network/config/netifd feeds/kiddin9/{rtl*,firewall4,fullconenat*,shortcut-fe} target/linux/generic/files
+rm -rf devices/common/patches/{fix.patch,targets.patch,kernel-defaults.patch,LINUX_VERSION.patch} target/imagebuilder package/network/config/netifd feeds/kiddin9/{rtl*,firewall4,fullconenat*,shortcut-fe} target/linux/generic/files
 
 svn co https://github.com/openwrt/openwrt/branches/openwrt-21.02/target/imagebuilder target/imagebuilder
 
